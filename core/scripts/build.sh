@@ -15,8 +15,8 @@ buildVariant() {
         make BUILD_NUMBER=$rom_fp installclean
         make BUILD_NUMBER=$rom_fp -j32 systemimage
         make BUILD_NUMBER=$rom_fp vndk-test-sepolicy
-        #cp $OUT/system.img release/$rom_fp/system-${2}.img
-        xz -c $OUT/system.img > release/$rom_fp/system-${2}.img.xz
+        cp $OUT/system.img release/$rom_fp/system-${2}.img
+        #xz -c $OUT/system.img > release/$rom_fp/system-${2}.img.xz
 }
 
 #buildVariant treble_arm64_avN-userdebug arm64-aonly-vanilla-nosu
