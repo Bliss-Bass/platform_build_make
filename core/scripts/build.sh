@@ -4,7 +4,7 @@ rom_fp="$(date +%y%m%d)"
 mkdir -p release/$rom_fp/
 set -e
 
-(cd device/phh/treble; bash generate.sh)
+(cd device/phh/treble; bash generate.sh bliss)
 
 export ANDROID_JACK_VM_ARGS="-Xmx8g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
 
