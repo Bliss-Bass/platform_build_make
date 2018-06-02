@@ -19,10 +19,10 @@ buildVariant() {
         xz -c $OUT/system.img > release/$rom_fp/system-${2}.img.xz
 }
 
-buildVariant treble_arm64_avN-userdebug arm64-aonly-vanilla-nosu
+#buildVariant treble_arm64_avN-userdebug arm64-aonly-vanilla-nosu
 buildVariant treble_arm64_agS-userdebug arm64-aonly-gapps-su
 
-buildVariant treble_arm64_bvN-userdebug arm64-ab-vanilla-nosu
-buildVariant treble_arm64_bgS-userdebug arm64-ab-gapps-su
+#buildVariant treble_arm64_bvN-userdebug arm64-ab-vanilla-nosu
+#buildVariant treble_arm64_bgS-userdebug arm64-ab-gapps-su
 
-buildVariant treble_arm_avN-userdebug arm-aonly-vanilla-nosu
+#buildVariant treble_arm_avN-userdebug arm-aonly-vanilla-nosu
