@@ -10,6 +10,8 @@ export ANDROID_JACK_VM_ARGS="-Xmx8g -Dfile.encoding=UTF-8 -XX:+TieredCompilation
 
 . build/envsetup.sh
 
+export LC_ALL=C
+
 buildVariant() {
         lunch $1
         make BUILD_NUMBER=$rom_fp installclean
