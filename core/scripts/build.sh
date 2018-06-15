@@ -11,6 +11,7 @@ export ANDROID_JACK_VM_ARGS="-Xmx8g -Dfile.encoding=UTF-8 -XX:+TieredCompilation
 . build/envsetup.sh
 
 export LC_ALL=C
+export USE_CCACHE=1
 
 make clean && make clobber
 
