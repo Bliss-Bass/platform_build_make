@@ -1379,7 +1379,7 @@ $(call dist-for-goals, sdk win_sdk sdk_addon, $(INSTALLED_FILES_FILE))
 
 systemimage_intermediates := \
     $(call intermediates-dir-for,PACKAGING,systemimage)
-BUILT_SYSTEMIMAGE := $(systemimage_intermediates)/system.img
+BUILT_SYSTEMIMAGE := $(systemimage_intermediates)/$(BLISS_VERSION)_system.img
 
 # Create symlink /system/vendor to /vendor if necessary.
 ifdef BOARD_USES_VENDORIMAGE
