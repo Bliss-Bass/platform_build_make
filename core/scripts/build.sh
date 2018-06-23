@@ -10,11 +10,16 @@ export ANDROID_JACK_VM_ARGS="-Xmx8g -Dfile.encoding=UTF-8 -XX:+TieredCompilation
 
 . build/envsetup.sh
 
+export LC_ALL=C
+export USE_CCACHE=1
+
+make clean && make clobber
+
 buildVariant() {
         lunch $1
-        make BUILD_NUMBER=$rom_fp installclean
-        make BUILD_NUMBER=$rom_fp -j32 systemimage
-        make BUILD_NUMBER=$rom_fp vndk-test-sepolicy
+        make BUILD_NUMBER=$rom_fp -j$(nproc) installclean
+        make BUILD_NUMBER=$rom_fp -j$(nproc) systemimage
+        make BUILD_NUMBER=$rom_fp -j$(nproc) vndk-test-sepolicy
         cp $OUT/system.img release/$rom_fp/system-${2}.img
         #xz -c $OUT/system.img > release/$rom_fp/system-${2}.img.xz
 }
